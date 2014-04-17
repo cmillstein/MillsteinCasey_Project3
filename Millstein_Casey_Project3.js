@@ -15,6 +15,17 @@ function procedureFunction(result) {
     }
 }
 
+function getElementString(indexOfArray, Array) {
+    var elementString =  Array[indexOfArray];
+    return elementString;
+}
+
+var index = 2;
+
+var resultString =  getElementString(index, electricGuitars);
+
+console.log("The element with index " + index + " is : " + resultString);
+
 console.log("Its time to go look for a new guitar!");
 guitarQuestion = window.prompt('Should I get an electric guitar?', 'yes/no');
 
@@ -29,7 +40,7 @@ if(guitarQuestion === 'null') {
 
 var buyElectric = procedureFunction(guitarQuestion);
 if (buyElectric) {
-    guitarConfirm = window.confirm('Do you have enough money for a Gibson?');
+    guitarConfirm = window.confirm('Should I get an Acoustic guitar?');
 }
 else
 {
@@ -120,7 +131,8 @@ getElectricGuitars(jsonGuitar);
 function returnOnlyOneModel(model,input){
     var output = [];
     for(var i = 0; i < input.length;i++){
-        if(input[i].model == model){
+        console.log('Checking for matching model ' + input[i].model);
+        if(input[i].model === model){
             //add it to our array
             output.push(input[i]);
         }
@@ -128,8 +140,8 @@ function returnOnlyOneModel(model,input){
     return output;
 }
 
-var output = returnOnlyOneModel('Accoustic', jsonGuitar.guitars);
-alert(output.length);
+var output = returnOnlyOneModel('Stratocaster', jsonGuitar.guitars);
+
 for(var k=0; k < output.length; k++) {
-    console.log("Guitar model :: " + output.model);
+    console.log("Guitar model :: " + output[k].model);
 }
