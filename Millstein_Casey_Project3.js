@@ -89,13 +89,30 @@ function booleanFunction(data){
 }
 
 //Checking for electric guitars and displaying them
-function getElectricGuitars(dataSet) {
 var electricGuitarSet = [];
-    for(var j=0; j < dataSet.guitars.length; j++) {
-        var isElectric = booleanFunction(jsonGuitar.guitars[j]);
-    }   
-}
+function getElectricGuitars(dataSet) {
 
+    for(var j=0; j < dataSet.guitars.length; j++) {
+        var isElectric = booleanFunction(dataSet.guitars[j]);
+        if(isElectric) {
+            electricGuitarSet.push(dataSet.guitars[j]);
+            console.log('Adding element: ' + dataSet.guitars[j]);
+        } else {
+            console.log('This is not an electric guitar');
+        }
+    }
+    
+    //Display the electric guitars 
+    var guitarIterator = 0;
+    while(guitarIterator < electricGuitarSet.length) {
+        
+        console.log('Guitar model : ' + electricGuitarSet[guitarIterator].model + '\n');
+        
+        guitarIterator++;
+    }
+    
+}
+getElectricGuitars(jsonGuitar);
 
 
 
@@ -109,4 +126,10 @@ function returnOnlyOneModel(model,input){
         }
     }
     return output;
+}
+
+var output = returnOnlyOneModel('Accoustic', jsonGuitar.guitars);
+alert(output.length);
+for(var k=0; k < output.length; k++) {
+    console.log("Guitar model :: " + output.model);
 }
