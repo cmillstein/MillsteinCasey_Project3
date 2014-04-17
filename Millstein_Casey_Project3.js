@@ -47,7 +47,7 @@ function calculateTax(initialPrice,taxAdded){
 
 // JSON
 
-var jsonGuitar = {
+jsonGuitar = {
 	"guitars": [
 		{
 			"brand": "Gibson",
@@ -87,6 +87,18 @@ var jsonGuitar = {
 function booleanFunction(data){
     return (data.type == "Electric");
 }
+
+//Checking for electric guitars and displaying them
+function getElectricGuitars(dataSet) {
+var electricGuitarSet = [];
+    for(var j=0; j < dataSet.guitars.length; j++) {
+        var isElectric = booleanFunction(jsonGuitar.guitars[j]);
+    }   
+}
+
+
+
+
 //input is an array and string, output is an array
 function returnOnlyOneModel(model,input){
     var output = [];
