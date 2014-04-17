@@ -58,6 +58,10 @@ function calculateTax(initialPrice,taxAdded){
     return initialPrice * taxAdded;
 }
 
+var initialPrice = 2000;
+var tax = calculateTax(2000, 20);
+
+console.log("Tax to be given : " + tax);
 // JSON
 
 jsonGuitar = {
