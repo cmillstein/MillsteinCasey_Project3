@@ -29,26 +29,26 @@ var jsonGuitar = {
 			"cost over $2500.00?": true
 		},
 		{
-			"brand2": Gibson,
+			"brand(2)": Gibson,
 			"model": SG,
 			"type": Electric,
 			"cost over $2500.00?": true
 
 		},
 		{
-			"brand3": Fender,
+			"brand(3)": Fender,
 			"model": Stratocaster,
 			"type": Electric,
 			"cost over $2500.00?": true
 		},
 		{
-			"brand4": Yamaha,
+			"brand(4)": Yamaha,
 			"model": APX500,
 			"type": Acoustic,
 			"cost over $2500.00?": false
 		},
 		{
-			"brand5": Ibanez,
+			"brand(5)": Ibanez,
 			"model": Prestige,
 			"type": Electric,
 			"cost over $2500.00?": false
