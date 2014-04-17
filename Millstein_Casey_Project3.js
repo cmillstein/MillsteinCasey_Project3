@@ -57,7 +57,19 @@ var jsonGuitar = {
 	]
 };
 
-function booleanFunction(isElectric,data){
-    
-    if(data.)
+//takes in JSON, returns boolean
+function booleanFunction(data){
+    return (data.type == "Electric");
 }
+//input is an array and string, output is an array
+function returnOnlyOneModel(model,input){
+    var output = [];
+    for(var i = 0; i < input.length;i++){
+        if(input[i].model == model){
+            //add it to our array
+            output.push(input[i]);
+        }
+    }
+    return output;
+}
+
