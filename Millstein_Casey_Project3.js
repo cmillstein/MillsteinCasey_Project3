@@ -19,6 +19,11 @@ if (guitarQuestion === true){
 	
 }
 
+// Number Function
+function calculateTax(initialPrice,taxAdded){
+    return initialPrice * (taxAdded+1);
+}
+
 // JSON
 
 var jsonGuitar = {
