@@ -24,6 +24,8 @@ var index = 2;
 
 var resultString =  getElementString(index, electricGuitars);
 
+
+
 console.log("The element with index " + index + " is : " + resultString);
 
 console.log("Its time to go look for a new guitar!");
@@ -93,6 +95,17 @@ jsonGuitar = {
 		}
 	]
 };
+
+// Nested loops
+
+if(jsonGuitar.hasOwnProperty('guitars')){
+    if(jsonGuitar.guitars.length > 0) {
+        console.log('The number of guitars in the given set is: ' + jsonGuitar.guitars.length );
+    }
+} else {
+    console.log("The data format is not correct.");
+}
+
 
 //takes in JSON, returns boolean
 function booleanFunction(data){
