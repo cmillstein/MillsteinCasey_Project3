@@ -7,9 +7,26 @@
 var electricGuitars = ["Les Paul", "SG", "Flying V", "Firebird"];
 var acousticGuitars = ["Jumbo", "Small Body", "Square Shoulder", "Mandolin"];
 
+function procedureFunction(result) {
+    if(result === 'yes') {
+        return electricGuitars;
+    } else {
+        return null;
+    }
+}
 
 console.log("Its time to go look for a new guitar!");
 guitarQuestion = window.prompt('Should I get an electric guitar?', 'yes/no');
+
+if(guitarQuestion === 'null') {
+    console.log('Selected not to buy an electric guitar');
+} else {
+   for(var i=0; i < guitarQuestion.length; i++) {
+       console.log("Selection " + i + " " + electricGuitars[i]); 
+   } 
+}
+
+
 var buyElectric = procedureFunction(guitarQuestion);
 if (buyElectric) {
     guitarConfirm = window.confirm('Do you have enough money for a Gibson?');
@@ -23,9 +40,9 @@ if (guitarQuestion === true){
 	console.log("Lets go get that electric guitar!");
 }
 
-// Number Function
+// Number Function and math
 function calculateTax(initialPrice,taxAdded){
-    return initialPrice * (taxAdded+1);
+    return initialPrice * taxAdded;
 }
 
 // JSON
