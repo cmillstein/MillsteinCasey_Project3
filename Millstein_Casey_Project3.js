@@ -14,9 +14,13 @@ var buyElectric = procedureFunction(guitarQuestion);
 if (buyElectric) {
     guitarConfirm = window.confirm('Do you have enough money for a Gibson?');
 }
+else
+{
+window.prompt("You can't buy the Guitar without money");
+}
+
 if (guitarQuestion === true){
 	console.log("Lets go get that electric guitar!");
-	
 }
 
 // Number Function
@@ -77,4 +81,3 @@ function returnOnlyOneModel(model,input){
     }
     return output;
 }
-
